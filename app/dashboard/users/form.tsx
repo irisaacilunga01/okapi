@@ -35,7 +35,7 @@ const FormSchema = z.object({
   password: z.string().min(2, {
     message: "le mot de passe doit contenir aumoins 2 caractères.",
   }),
-  niveauAutorisation: z.string().min(2, {
+  niveauautorisation: z.string().min(2, {
     message: "le mot de passe doit contenir aumoins 2 caractères.",
   }),
 });
@@ -45,7 +45,7 @@ export function Formulaire({
   nom = "",
   email = "",
   password = "",
-  niveauAutorisation = "Receptionniste",
+  niveauautorisation = "Receptionniste",
 }) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -53,7 +53,7 @@ export function Formulaire({
       nom,
       email,
       password,
-      niveauAutorisation,
+      niveauautorisation,
     },
   });
 
@@ -137,7 +137,7 @@ export function Formulaire({
 
         <FormField
           control={form.control}
-          name="niveauAutorisation"
+          name="niveauautorisation"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Niveau d&apos;autorisation</FormLabel>

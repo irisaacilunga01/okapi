@@ -194,10 +194,6 @@ export const columns: ColumnDef<Payment>[] = [
 ];
 
 export function DataTable({ data }: { data: Payment[] }) {
-  // const searchParams = useSearchParams()
-
-  // const search = searchParams.get('msg')
-
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
