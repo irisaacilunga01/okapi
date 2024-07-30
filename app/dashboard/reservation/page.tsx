@@ -23,8 +23,7 @@ export default async function Page() {
         LEFT JOIN Personnel p ON r.personnelId = p.id;
   `;
 
-  return (
-    <div className="flex flex-col">
+  return (<div className="flex flex-col">
       <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6 justify-between">
         <span>Page Gérer Reservation </span>
         <ModeToggle />
@@ -33,6 +32,5 @@ export default async function Page() {
       <main>
         <DataTable data={rows} />
       </main>
-    </div>
-  );
+    </div> );
 }
