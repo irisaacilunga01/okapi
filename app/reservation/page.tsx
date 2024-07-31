@@ -21,9 +21,7 @@ import { ModeToggle } from "@/components/toggletheme";
 import { DataTable } from "./dataTable";
 import LogoutButton from "@/components/logout-button";
 
-type CardProps = React.ComponentProps<typeof Card>;
-
-export default async function Page({ className, ...props }: CardProps) {
+export default async function Page() {
   const cookieStore = cookies();
   const tokenCookie = cookieStore.get("token")?.value;
 
@@ -54,11 +52,7 @@ export default async function Page({ className, ...props }: CardProps) {
 
       <div className="p-24 grid grid-cols-3 gap-8">
         {rows.map((chambre) => (
-          <Card
-            className={cn("w-[380px]", className)}
-            key={chambre.id}
-            {...props}
-          >
+          <Card className={cn("w-[380px]")} key={chambre.id}>
             <CardHeader>
               <CardTitle>Chambre {chambre.id}</CardTitle>
               <CardDescription>Une description de la chambre.</CardDescription>
