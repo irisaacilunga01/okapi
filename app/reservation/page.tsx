@@ -15,8 +15,6 @@ import { Chambre } from "@/lib/types";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Formulaire } from "../dashboard/reservation/form";
 
-type CardProps = React.ComponentProps<typeof Card>;
-
 export default async function Page() {
   const { rows } = await sql<Chambre>`SELECT * from chambre `;
   console.log({ rows });
