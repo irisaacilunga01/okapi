@@ -312,7 +312,6 @@ export async function handlelogin(data: { email: string; mdp: string }) {
 
   const { rows, rowCount } =
     await sql<Client>`SELECT * from client WHERE email=${email} AND password=${mdp};`;
-  console.log("client :", { rows, rowCount });
   if (rowCount != null && rowCount >= 1) {
     const { id, nom, prenom } = rows[0];
 
@@ -326,7 +325,6 @@ export async function handlelogin(data: { email: string; mdp: string }) {
   } else {
     const { rows, rowCount } =
       await sql<Personnel>`SELECT * from personnel WHERE email=${email} AND password=${mdp};`;
-    console.log("persoonel :", { rows, rowCount });
 
     if (rowCount != null && rowCount >= 1) {
       const { id, nom, niveauautorisation } = rows[0];

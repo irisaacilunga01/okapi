@@ -1,6 +1,5 @@
 import React from "react";
 import { sql } from "@vercel/postgres";
-import { Paiement, Reservation } from "@/lib/types";
 import { Formulaire } from "../form";
 
 async function Page({ params }: { params: { id: string } }) {

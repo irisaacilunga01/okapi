@@ -61,10 +61,10 @@ function Page() {
                 accueille avec chaleur et professionnalisme.
               </p>
               <div className="hero_section_button">
-                <Link href="/login">
+                <Link href="/dashboard">
                   <button className="button">Reservez chambre</button>
                 </Link>
-                <Link href="/login">
+                <Link href="/dashboard">
                   <button className="button">Se connecter</button>
                 </Link>
               </div>

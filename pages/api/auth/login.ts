@@ -15,10 +15,8 @@ export default async function handler(
     const { email, password } = req.body;
     const { data, role } = await handlelogin({ email, mdp: password });
     // Remplacez ceci par votre logique de vérification
-    console.log("login & mdp recupéré :", { data, role });
 
     if (data) {
-      console.log("login & mdp exactes :", { data, role });
       // Créer un JWT
       const token = jwt.sign(
         { email, nom: data.nom, id: data.id, role },
