@@ -5,7 +5,7 @@ import cookie from "cookie";
 import { redirect } from "next/navigation";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "POST") {
+  if (req.method === "GET") {
     res.setHeader(
       "Set-Cookie",
       cookie.serialize("token", "", {
@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         path: "/",
       })
     );
-    res.status(200).end(`Method ${req.method}`);
+    redirect("/");
   } else {
     res.setHeader("Allow", ["POST"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);

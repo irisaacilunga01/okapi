@@ -67,7 +67,7 @@ export const columns: ColumnDef<Payment>[] = [
     cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
   },
   {
-    accessorKey: "nbLit",
+    accessorKey: "nblit",
     header: ({ column }) => {
       return (
         <Button
@@ -80,7 +80,7 @@ export const columns: ColumnDef<Payment>[] = [
       );
     },
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("nbLit")}</div>
+      <div className="capitalize">{row.getValue("nblit")}</div>
     ),
   },
   {

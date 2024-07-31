@@ -13,13 +13,16 @@ export default function Dashboard({
   let verificationcookie: Users | null = null;
   if (tokenCookie) {
     verificationcookie = verifyToken(tokenCookie);
-    if (verificationcookie?.role == "Client") {
-      redirect("/reservation");
-    }
-  } else {
-    redirect("/login");
-  }
+    console.log({ verificationcookie });
 
+    if (verificationcookie?.role) {
+      if (verificationcookie?.role == "Client") {
+        redirect("/reservation");
+      }
+    } else {
+      redirect("/login");
+    }
+  }
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[200px_1fr] lg:grid-cols-[200px_1fr]">
       <LinkUrl />

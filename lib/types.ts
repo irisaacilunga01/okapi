@@ -11,11 +11,11 @@ export declare type Client = {
 
 export declare type Chambre = {
   id: number;
-  nbLit: number;
+  nblit: number;
   prix: number;
   style: string;
   etat: string;
-  hotelId: number;
+  hotelid: number;
   // etat: "Disponible" | "Occupée" | "En maintenance";
 };
 

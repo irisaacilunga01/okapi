@@ -15,6 +15,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // await syncDatabase();
   return (
     <html lang="fr">
       <body className={`${inter.className}`}>
