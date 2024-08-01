@@ -22,7 +22,7 @@ export default function Login() {
 
     if (response.ok) {
       // Redirige l'utilisateur après une connexion réussie
-      window.location.href = "/";
+      window.location.href = "/dashboard";
     } else {
       const data = await response.json();
       setError(data.error);
